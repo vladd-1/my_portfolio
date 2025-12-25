@@ -425,6 +425,7 @@ body::before {
 section {
     padding: 100px 0;
     position: relative;
+    scroll-margin-top: 80px; /* match navbar height */
 }
 
 .section-title {
