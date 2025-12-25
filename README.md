@@ -96,9 +96,20 @@ Edit the CSS variables in `styles.css` at the top of the file:
 
 ## Deployment
 
-You can deploy this portfolio to:
+### GitHub Pages (Recommended)
 
-- **GitHub Pages**: Push to a GitHub repository and enable Pages
+This portfolio is ready for GitHub Pages deployment! See `DEPLOY.md` for detailed instructions.
+
+**Quick Steps:**
+1. Create a new **public** repository on GitHub
+2. Push this code to your repository
+3. Enable GitHub Pages in repository Settings > Pages
+4. Your portfolio will be live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+
+For detailed instructions, see [DEPLOY.md](DEPLOY.md)
+
+### Other Hosting Options
+
 - **Netlify**: Drag and drop the folder or connect via Git
 - **Vercel**: Import the project and deploy
 - **AWS S3**: Upload files to an S3 bucket and enable static website hosting
