@@ -1232,6 +1232,10 @@ section {
     transform: translateX(5px);
 }
 
+a:focus {
+    outline: 2px solid #00bcd4;
+}
+
 /* Loader */
 #loader {
     position: fixed;

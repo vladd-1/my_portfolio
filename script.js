@@ -1,5 +1,5 @@
 // Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('button[aria-label="Toggle navigation menu"]');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
@@ -110,7 +110,7 @@ document.querySelectorAll('.project-card, .cert-card, .skill-category').forEach(
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
-const observer = new IntersectionObserver(entries => {
+const navObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navLinks.forEach(link =>
@@ -123,7 +123,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.6 });
 
-sections.forEach(sec => observer.observe(sec));
+sections.forEach(sec => navObserver.observe(sec));
 
 // Loader - Hide when page is fully loaded
 window.addEventListener("load", () => {
