@@ -106,28 +106,24 @@ document.querySelectorAll('.project-card, .cert-card, .skill-category').forEach(
     });
 });
 
-// Active navigation link highlighting
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+// Active navigation link highlighting using IntersectionObserver
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link =>
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === `#${entry.target.id}`
+        )
+      );
+    }
+  });
+}, { threshold: 0.6 });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
+sections.forEach(sec => observer.observe(sec));
 
 // Add active class styling
 const style = document.createElement('style');
