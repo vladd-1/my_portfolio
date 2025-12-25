@@ -126,15 +126,8 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(sec => observer.observe(sec));
 
 // Loader - Hide when page is fully loaded
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    if (loader) {
-        loader.classList.add('hidden');
-        // Remove loader from DOM after animation
-        setTimeout(() => {
-            loader.remove();
-        }, 500);
-    }
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
 });
 
 // Add active class styling
