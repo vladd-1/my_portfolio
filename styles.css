@@ -210,6 +210,9 @@ nav a.active {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    border: none;
+    background: none;
+    padding: 0;
 }
 
 .hamburger span {
