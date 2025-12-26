@@ -897,6 +897,7 @@ section {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .project-card::before {
