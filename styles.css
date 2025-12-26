@@ -962,6 +962,9 @@ section {
     border-radius: 25px;
     background: rgba(99, 102, 241, 0.1);
     width: fit-content;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
 }
 
 .project-link:hover {
