@@ -894,6 +894,9 @@ section {
     border: 1px solid rgba(99, 102, 241, 0.1);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .project-card::before {
@@ -964,10 +967,10 @@ section {
     width: fit-content;
     position: relative;
     z-index: 2;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
-.project-link:hover {
+.project-card:hover .project-link {
     gap: 1rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text-light);
