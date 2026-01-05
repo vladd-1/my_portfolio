@@ -19,6 +19,18 @@
     --glow-color: rgba(255, 0, 110, 0.4);
 }
 
+/* Light Mode Variables */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --glow-color: rgba(255, 0, 110, 0.2);
+}
+
+
 /* Reset & Base Styles */
 * {
     margin: 0;

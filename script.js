@@ -60,6 +60,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to 'dark'
+const currentTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', currentTheme);
+
+// Update icon based on current theme
+if (currentTheme === 'light') {
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+}
+
+themeToggle.addEventListener('click', () => {
+    const theme = html.getAttribute('data-theme');
+
+    if (theme === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
 // Theme toggle removed - dark mode only design
 
 
