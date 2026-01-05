@@ -378,17 +378,27 @@ section {
 .tech-badge {
     background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.1));
     color: var(--text-primary);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
+    padding: 0.6rem;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 400;
     border: 1px solid var(--gradient-start);
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.tech-badge i {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
 .tech-badge:hover {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0 0 15px var(--glow-color);
 }
 
