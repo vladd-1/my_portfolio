@@ -36,6 +36,64 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(131, 56, 236, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 60% 90%, rgba(181, 55, 242, 0.06) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+}
+
+/* Animated Grid Pattern */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(255, 0, 110, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 110, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
 }
 
 /* Container */
@@ -736,6 +794,99 @@ section {
 #loader.hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Animated Particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--gradient-start), transparent);
+    opacity: 0.15;
+    animation: particleFloat 15s infinite ease-in-out;
+}
+
+.particle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    background: radial-gradient(circle, var(--gradient-start), transparent);
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    left: 80%;
+    background: radial-gradient(circle, var(--accent-blue), transparent);
+    animation-duration: 25s;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 80%;
+    left: 20%;
+    background: radial-gradient(circle, var(--accent-purple), transparent);
+    animation-duration: 30s;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    top: 40%;
+    left: 60%;
+    background: radial-gradient(circle, var(--accent-green), transparent);
+    animation-duration: 22s;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    width: 90px;
+    height: 90px;
+    top: 10%;
+    left: 70%;
+    background: radial-gradient(circle, var(--gradient-end), transparent);
+    animation-duration: 28s;
+    animation-delay: 3s;
+}
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.15;
+    }
+
+    25% {
+        transform: translate(50px, -50px) scale(1.1);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translate(-30px, 30px) scale(0.9);
+        opacity: 0.1;
+    }
+
+    75% {
+        transform: translate(40px, 60px) scale(1.05);
+        opacity: 0.18;
+    }
 }
 
 /* Responsive Design */
