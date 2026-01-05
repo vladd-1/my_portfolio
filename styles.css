@@ -49,24 +49,23 @@ body::before {
     height: 100%;
     z-index: -1;
     background:
-        radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(131, 56, 236, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.06) 0%, transparent 50%),
-        radial-gradient(circle at 60% 90%, rgba(181, 55, 242, 0.06) 0%, transparent 50%);
-    animation: backgroundShift 20s ease-in-out infinite;
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(131, 56, 236, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 217, 255, 0.02) 0%, transparent 50%);
+    animation: backgroundShift 40s ease-in-out infinite;
 }
 
 @keyframes backgroundShift {
 
     0%,
     100% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1);
         opacity: 1;
     }
 
     50% {
-        transform: scale(1.1) rotate(5deg);
-        opacity: 0.8;
+        transform: scale(1.05);
+        opacity: 0.9;
     }
 }
 
@@ -80,10 +79,10 @@ body::after {
     height: 100%;
     z-index: -1;
     background-image:
-        linear-gradient(rgba(255, 0, 110, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 0, 110, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: gridMove 30s linear infinite;
+        linear-gradient(rgba(255, 0, 110, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 110, 0.01) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: gridMove 60s linear infinite;
 }
 
 @keyframes gridMove {
@@ -92,7 +91,7 @@ body::after {
     }
 
     100% {
-        transform: translate(50px, 50px);
+        transform: translate(80px, 80px);
     }
 }
 
@@ -811,58 +810,58 @@ section {
     position: absolute;
     border-radius: 50%;
     background: radial-gradient(circle, var(--gradient-start), transparent);
-    opacity: 0.15;
-    animation: particleFloat 15s infinite ease-in-out;
+    opacity: 0.06;
+    animation: particleFloat 25s infinite ease-in-out;
 }
 
 .particle:nth-child(1) {
-    width: 80px;
-    height: 80px;
-    top: 20%;
+    width: 60px;
+    height: 60px;
+    top: 15%;
     left: 10%;
     background: radial-gradient(circle, var(--gradient-start), transparent);
-    animation-duration: 20s;
+    animation-duration: 35s;
     animation-delay: 0s;
 }
 
 .particle:nth-child(2) {
-    width: 60px;
-    height: 60px;
-    top: 60%;
-    left: 80%;
+    width: 50px;
+    height: 50px;
+    top: 65%;
+    left: 85%;
     background: radial-gradient(circle, var(--accent-blue), transparent);
-    animation-duration: 25s;
-    animation-delay: 2s;
+    animation-duration: 40s;
+    animation-delay: 5s;
 }
 
 .particle:nth-child(3) {
-    width: 100px;
-    height: 100px;
-    top: 80%;
-    left: 20%;
+    width: 70px;
+    height: 70px;
+    top: 85%;
+    left: 15%;
     background: radial-gradient(circle, var(--accent-purple), transparent);
-    animation-duration: 30s;
-    animation-delay: 4s;
+    animation-duration: 45s;
+    animation-delay: 10s;
 }
 
 .particle:nth-child(4) {
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     top: 40%;
-    left: 60%;
-    background: radial-gradient(circle, var(--accent-green), transparent);
-    animation-duration: 22s;
-    animation-delay: 1s;
+    left: 70%;
+    background: radial-gradient(circle, var(--gradient-end), transparent);
+    animation-duration: 38s;
+    animation-delay: 3s;
 }
 
 .particle:nth-child(5) {
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
     top: 10%;
-    left: 70%;
-    background: radial-gradient(circle, var(--gradient-end), transparent);
-    animation-duration: 28s;
-    animation-delay: 3s;
+    left: 75%;
+    background: radial-gradient(circle, rgba(131, 56, 236, 0.5), transparent);
+    animation-duration: 42s;
+    animation-delay: 8s;
 }
 
 @keyframes particleFloat {
@@ -870,24 +869,25 @@ section {
     0%,
     100% {
         transform: translate(0, 0) scale(1);
-        opacity: 0.15;
+        opacity: 0.06;
     }
 
     25% {
-        transform: translate(50px, -50px) scale(1.1);
-        opacity: 0.2;
+        transform: translate(30px, -30px) scale(1.05);
+        opacity: 0.08;
     }
 
     50% {
-        transform: translate(-30px, 30px) scale(0.9);
-        opacity: 0.1;
+        transform: translate(-20px, 20px) scale(0.95);
+        opacity: 0.04;
     }
 
     75% {
-        transform: translate(40px, 60px) scale(1.05);
-        opacity: 0.18;
+        transform: translate(25px, 35px) scale(1.02);
+        opacity: 0.07;
     }
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
