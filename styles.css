@@ -178,7 +178,7 @@ body::after {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    color: var(--text-secondary);
+    color: #888888;
 }
 
 .hero-name {
