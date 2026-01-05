@@ -182,12 +182,13 @@ body::after {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(135deg, #39ff14, #00ff00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: 2px;
     line-height: 1.2;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
 }
 
 .hero-subtitle {
@@ -199,11 +200,13 @@ body::after {
 }
 
 .typing-text {
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(135deg, #ff0000, #ff3333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
+
 
 .cursor {
     color: var(--gradient-start);
