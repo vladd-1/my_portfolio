@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vladd-1.github.io/my_portfolio/sitemap.xml
